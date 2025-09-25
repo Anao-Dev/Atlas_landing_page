@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <title>Atlas | Portal para Academias</title>
+   <style>
+   
+header .navbar {
+  min-height: 90px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Logo maior sem distorcer */
+.navbar-brand img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+.navbar-brand span{
+     font-family: 'Anton', sans-serif;
+      letter-spacing: 2px;
+      font-size: 1.7rem; /* visível e chamativo */
+      color: rgb(255, 255, 255);
+}
+.navbar-brand .nav-link{
+     transition: color 0.3s, background-color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+  color: #ffcc00; /* muda a cor do texto */
+  background-color: rgba(255, 255, 255, 0.1); /* fundo levemente destacado */
+  border-radius: 5px; /* cantos arredondados */
+}
+
+/* Centraliza verticalmente os itens da navbar */
+.navbar-brand,
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+/* Remove borda do botão hamburger */
+.navbar-toggler {
+  border: none;          /* remove borda padrão */
+  outline: none;         /* remove outline no clique */
+}
+
+/* Personaliza as 3 linhas */
+.navbar-toggler-icon {
+  background-image: none; /* remove o ícone padrão do bootstrap */
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Linhas brancas */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon div {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Adiciona a linha do meio */
+.navbar-toggler-icon div {
+  margin: 0; 
+}
+.btn-atlas {
+    background-color: #eb840eef; /* cor personalizada */
+    border: none;
+}
+
+.btn-atlas:hover {
+    background-color: #ce6119; /* cor ao passar o mouse */
+}
+
+.bg-kosmos{
+ background-color: #e98f07; /* laranja vibrante */
+  color: white; /* garante contraste com o texto */
+}
+::-webkit-scrollbar {
+  width: 10px;             /* largura da barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #203d68;     /* fundo da trilha */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #eb840e; /* cor da barra de rolagem */
+  border-radius: 5px;
+  border: 2px solid #203d68; /* espaço ao redor da barra */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ce6119; /* cor ao passar o mouse */
+}
+
+/* Scrollbar para Firefox */
+* {
+  scrollbar-width: thin;           /* largura fina */
+  scrollbar-color: #eb840e #203d68; /* cor da barra e do fundo */
+}
+
+
+
+</style>
+  </head>
+  <body>
+<header>
+  <nav class="navbar navbar-expand-lg shadow-sm" style="background: #203d68;">
+    <div class="container-fluid px-3"> <!-- container-fluid ocupa toda largura -->
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/atlasass-removebg-preview.png" alt="Logo">
+        <span class="ms-2">ATLAS</span>
+      </a>
+
+      <!-- Botão hamburger para mobile -->
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon">
+    <div></div> <!-- linha do meio -->
+  </span>
+</button>
+
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white active" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Serviços
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#">Planos</a></li>
+              <li><a class="dropdown-item" href="#">Personal</a></li>
+              <li><a class="dropdown-item" href="#">Vídeos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <main>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center justify-content-center text-center" 
+           style="background: url('assets/img/hero.jpg') no-repeat center center; 
+                  background-size: cover; 
+                  height: 90vh; 
+                  color: white; 
+                  position: relative;">
+    
+    <!-- Overlay escuro para texto legível -->
+    <div style="position: absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.5);"></div>
+    
+    <div class="container position-relative">
+      <h1 class="display-1 fw-bold mb-4" style="font-family: 'Anton', sans-serif;">Bem-vindo ao Atlas</h1>
+      <p class="lead mb-4 text-uppercase" >Transformando academias com tecnologia, treinos personalizados e serviços completos para você.</p>
+      <a href="#servicos" class="btn btn-atlas btn-lg text-white fw-bold shadow-sm">Confira Nossos Serviços</a>
+    </div>
+  </section>
+
+  <!-- Sobre a Empresa -->
+  <section id="sobre" class="py-5 bg-kosmos" >
+    <div class="container">
+      <h2 class="text-center mb-5" style="font-family: 'Anton', sans-serif;">Sobre a Kosmos 5</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="assets/img/KO5MOS.png" alt="Equipe Kosmos" class="img-fluid rounded-5 shadow-sm">
+        </div>
+        <div class="col-md-6">
+          <p class="fs-5">A Kosmos 5 é o grupo responsável pelo portal Atlas. Somos apaixonados por tecnologia e o setor fitness, e criamos soluções que ajudam academias e usuários a alcançarem seus objetivos.</p>
+          <p class="fs-5">Nosso time é formado por Gabriel Porto (<strong>Gerente e Analista</strong>), Letícia Dantas (<strong>Documentarista</strong>), Rodrigo Brandão (<strong>Front-end</strong>), João Gabriel (<strong>Back-end</strong>) e Daniel Ramos (<strong>Designer</strong>). Juntos, desenvolvemos este portal com dedicação, profissionalismo e inovação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <!-- Serviços -->
+<section id="servicos" class="py-5" style="background-color: #203d68; color: white;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-family: 'Anton', sans-serif;">Nossos Serviços</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm border-0 bg-white text-black">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Planos Personalizados</h5>
+            <p class="card-text">Treinos e alimentação adaptados ao perfil de cada usuário.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm border-0 bg-white text-black">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Treinos Online</h5>
+            <p class="card-text">Acesse treinos e vídeos em qualquer lugar com acompanhamento digital.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm border-0 bg-white text-black">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Personal Trainer</h5>
+            <p class="card-text">Profissionais para maximizar seus resultados e orientar corretamente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contato -->
+<footer class="py-5 bg-dark text-white" id="contato">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    
+    
+    <!-- Contato -->
+    <div class="mb-3 mb-md-0 text-center text-md-start">
+      <p class="mb-1">Email: contato@atlas.com | Telefone: (21) 99999-9999</p>
+      <p class="mb-0">Endereço: Rua Exemplo, 123 - Cidade, Estado</p>
+    </div>
+
+    <!-- Redes Sociais -->
+    <div class="d-flex align-items-center">
+      <a href="#" class="text-white mx-2" style="text-decoration: none;">Facebook</a>
+      <a href="#" class="text-white mx-2" style="text-decoration: none;">Instagram</a>
+      <a href="#" class="text-white mx-2" style="text-decoration: none;">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="container text-center mt-4">
+    <p class="mb-0">&copy; 2025 Kosmos 5 - Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+</main>
+
+
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
